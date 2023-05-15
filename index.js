@@ -3,9 +3,6 @@ const app = express();
 const path  = require('path');
 const hbs = require('hbs');
 
-
-const port = 8080;
-
 // Definición carpeta documentos estáticos
 app.use(express.static('public'));
 
@@ -16,10 +13,6 @@ app.set('view engine', 'hbs');
 
 // Definición ruta de documentos parciales
 hbs.registerPartials(__dirname + '/public/views/partials');
-
-app.listen(port, () => {
-    console.log('listening on port ' + port);
-});
 
 // Página de inicio
 
